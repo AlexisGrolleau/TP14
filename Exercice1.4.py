@@ -5,12 +5,13 @@ class Window(QWidget):
     def __init__(self,n):
         QWidget.__init__(self)
         layout = QVBoxLayout()
-        widget = []
-        for i in range(n):
-            widget.append(QLabel("Ceci est un label"))
-        for i in widget:
-            layout.addWidget(i)
-        self.setLayout(layout)
+        self.label = QLabel("Ceci est un QLabel")
+        self.button = QPushButton("Ceci est un QPushButton")
+
+        self.layout.addWidget(self.label)
+        self.layout.addWidget(self.button)
+
+        self.setLayout(self.layout)
 
 
 if __name__ == "__main__":
